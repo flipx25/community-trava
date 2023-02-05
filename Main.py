@@ -1,4 +1,5 @@
-# -- Main
+# -*- coding: utf-8 -*-
+# code by: rydoo, felipe travas, hypn0thcy
 try:
     import requests
     import json
@@ -13,8 +14,19 @@ except Exception:
     exit()
 
 
+logo = """
+         ______                             ____  _                          __
+        /_  __/________ __   ______ _      / __ \(_)_____________  _________/ /
+         / / / ___/ __ `/ | / / __ `/_____/ / / / / ___/ ___/ __ \/ ___/ __  / 
+        / / / /  / /_/ /| |/ / /_/ /_____/ /_/ / (__  ) /__/ /_/ / /  / /_/ /  
+       /_/ /_/   \__,_/ |___/\__,_/     /_____/_/____/\___/\____/_/   \__,_/   
+             @Created BY: rydoo, flipx_x e mobly travas && Edited BY: Hypn0thcy
+"""
+
+
 os.system("cls")
 os.system("color 0a")
+print(logo)
 
 print('               Escreva Abaixo Qual Opção Deseja Usar:')
 print('\n                  [1] -> Travar Um Chat (GRUPO)')
@@ -26,6 +38,7 @@ try:
 
     if groupORdm == '1':
         os.system('cls')
+        print(logo)
         token = str(input("Token -> ")).strip() # Aqui Estou solicitando que o usuario insira o TOKEN.
 
         headers = {'Authorization':token,'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.12 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36'}
@@ -99,9 +112,10 @@ try:
 
     elif groupORdm == '2':
         os.system('cls')
-        token = str(input("Token -> ")).strip()
+        print(logo)
+        token = str(input("Token -> ")).strip() # Aqui Estou solicitando que o usuario insira o TOKEN.
 
-        uID = str(input("ID Do Privado (COPIE OS NUMEROS DEPOIS DO @me/)-> ")).strip()
+        uID = str(input("ID Do Privado (COPIE OS NUMEROS DEPOIS DO @me/)-> ")).strip() # Aqui Estou solicitando que o usuario insira o ID Da Pessoa ele deseja travar.
         print('                  Opção De Emojis:\n')
         print('[1] -> 🐵🙈🙉🙊🐒')
         print('[2] -> 👹☠️👺👻💀')
@@ -229,5 +243,7 @@ try:
         exit()
 except KeyboardInterrupt:
     os.system('cls')
+    print(logo)
+    print('                                    Até Mais!! ^^')
     time.sleep(2.5)
     exit()
